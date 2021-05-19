@@ -1,4 +1,3 @@
-from api_yamdb import settings
 from django.contrib.auth.tokens import default_token_generator
 from django.core.mail import send_mail
 from rest_framework import status
@@ -9,6 +8,7 @@ from rest_framework.response import Response
 from rest_framework.viewsets import ModelViewSet
 from rest_framework_simplejwt.tokens import AccessToken
 
+from api_yamdb import settings
 from users.models import User
 
 from .permissions import AdminPermission
