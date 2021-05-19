@@ -5,7 +5,7 @@
 ![yamdb_final](https://github.com/lookin44/yamdb_final/workflows/yamdb_final/badge.svg)
 
 # Установка сервиса
-1. Скопируйте проект к себе на компютер ```git clone https://github.com/Lookin44/infra_sp2.git```
+1. Скопируйте проект к себе на компьютер ```git clone https://github.com/Lookin44/infra_sp2.git```
 2. Создайте файл .env со значениями: 
 ```DB_ENGINE=django.db.backends.postgresql```
 ```DB_NAME=postgres```
@@ -22,7 +22,7 @@
 
 # Алгоритм регистрации пользователей
 1. Пользователь отправляет запрос с параметром email и username на ```/auth/email/```.
-2. **YaMDB** отправляет письмо с кодом подтверждения (confirmation_code) на адрес email .
+2. **YaMDB** отправляет письмо с кодом подтверждения (confirmation_code) на адрес email.
 3. Пользователь отправляет запрос с параметрами email, username и confirmation_code на ```/auth/token/```, в ответе на запрос ему приходит token (JWT-токен).
 4. При желании пользователь отправляет PATCH-запрос на ```/users/me/``` и заполняет поля в своём профайле (описание полей — в документации).
 
