@@ -2,7 +2,8 @@
 Проект YaMDb собирает отзывы пользователей на произведения. Произведения делятся на категории: «Книги», «Фильмы»,
 «Музыка».
 
-[![yamdb_final workflow](https://github.com/github/docs/actions/workflows/main.yml/badge.svg)](https://github.com/Lookin44/yamdb_final/actions)
+![yamdb_final workflow](https://github.com/lookin44/yamdb_final/workflows/yamdb_final%20workflow/badge.svg)
+![yamdb_final workflow](https://github.com/lookin44/yamdb_final/workflows/yamdb_finalworkflow/badge.svg)
 
 # Установка сервиса
 1. Скопируйте проект к себе на компютер ```git clone https://github.com/Lookin44/infra_sp2.git```
