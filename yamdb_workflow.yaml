@@ -55,7 +55,7 @@ jobs:
           passphrase: ${{ secrets.PASSPHRASE }}
           stack_file_name: docker-compose.yaml
           script: |
-            sudo docker ${{ secrets.DOCKER_USERNAME }}/yamdb_final
+            sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb_final
             sudo docker-compose stop
             sudo docker-compose rm web
             touch .env
@@ -63,7 +63,7 @@ jobs:
             echo POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }} >> .env
             echo EMAIL_HOST_USER=${{ secrets.EMAIL_HOST_USER }} >> .env
             echo EMAIL_HOST_PASSWORD=${{ secrets.EMAIL_HOST_PASSWORD }} >> .env
-            sudo docker-compose up -d
+            sudo docker-compose up -d --build
             sudo docker-compose exec -T web python manage.py migrate --noinput
             sudo docker-compose exec -T web python manage.py collectstatic --no-input
 
