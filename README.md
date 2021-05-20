@@ -44,3 +44,5 @@
   - Роль: Developer; develop: приложение Api: модели, вьюхи, пермишены, сериалайзеры, эндпоинты для Category, Genre, Title
 * [Петр Балдаев](https://github.com/spqr-86)
   - Роль: Developer; develop: приложение Api: модели, вьюхи, пермишены, сериалайзеры, эндпоинты для Review, Comment
+
+Сервис работает на http://84.201.163.145/api/v1/
