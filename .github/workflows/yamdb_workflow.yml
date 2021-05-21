@@ -60,12 +60,8 @@ jobs:
           script: |
             sudo docker pull ${{ secrets.DOCKER_USERNAME }}/yamdb_final
             sudo docker-compose down -v
-            sudo docker-compose rm web db nginx
+            sudo docker-compose rm web
             sudo docker-compose up -d --build
-            sudo docker-compose exec -T web python manage.py makemigrations users --noinput
-            sudo docker-compose exec -T web python manage.py makemigrations api --noinput
-            sudo docker-compose exec -T web python manage.py migrate --noinput
-            sudo docker-compose exec -T web python manage.py collectstatic --no-input
 
   send_message:
     runs-on: ubuntu-latest
